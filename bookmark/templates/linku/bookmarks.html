@@ -1,0 +1,61 @@
+{% extends 'base_authenticated.html' %}
+
+
+{% block content %}
+<h1>Bookmarks</h1>
+
+<!-- <ul> -->
+<!--     <li>Get a bookmarklet</li> -->
+<!-- </ul> -->
+
+<table id="bookmark-table" cellpadding="0" cellspacing="0" border="0" width="90%">
+    <thead>
+        <tr>
+            <th width="10%">&nbsp;</th>
+            <th width="80%">&nbsp;</th>
+            <th width="10%">&nbsp;</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+{% endblock %}
+
+{% block pagejs %}
+<script type="text/javascript" src="/js/jquery.searchable.js"></script>
+<script type="text/javascript" src="/js/jquery.pagination.js"></script>
+<script type="text/javascript">
+
+function loadBookmarks(data) {
+    if (data.length >= 1) {
+        for (i = 0; i < data.length; i++) { 
+            var day = data[i].date;
+            var link = data[i].link;
+            var title = data[i].title;
+            var note = data[i].note;
+            var row = "<tr><td>" + day + "</td><td><a href=\"" + link + "\">" + title + "</a><br/>" + note + "</td><td></td></tr>";
+            $('#bookmark-table tbody:last').append(row);
+        }
+    }
+}
+
+// This has to be last
+$(document).ready(function() {
+    $.ajaxSetup({cache: false});
+
+    var data = $.getJSON('/my/bookmarks/?json', function(data) {
+        loadBookmarks(data);
+    });
+
+    $("#bookmark-table").searchable();
+    $("#bookmark-table").pagination(20, {});
+});
+
+</script>
+
+{% endblock %}
+
+{% comment %}
+
+            var row = "<tr><td>" + data[i].title + "<br/>" + data[i].link + "<br/>" + data[i].note "</td></tr>";
+{% endcomment %}

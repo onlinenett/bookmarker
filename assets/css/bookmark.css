@@ -1,0 +1,315 @@
+/* @override http://localhost:8000/css/bookmark.css */
+
+{
+	margin: 0;
+	padding: 0;
+}
+
+header, footer, aside, nav, article {
+	display: block;
+}
+
+body {
+	margin: 0 auto;
+	width: 940px;
+	font: 14px Arial, Helvetica, "Helvetica Neue", Geneva, sans-serif;
+	background: #f0f0f0;
+}
+
+#content {
+	width: 940px;
+	display: table;
+	margin-top: 66px;
+	padding: 20px;
+	display: table;
+}
+
+header hgroup h1 {
+	color: #462390;
+	text-shadow: #212121 2px 2px 0;
+	font: bold 4em "Lobster", Helvetica, "Helvetica Neue", Arial, Geneva, sans-serif;
+}
+
+header hgroup h2 {
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 28px;
+	line-height: 44px;
+	padding: 22px 0;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0;
+}
+
+p {
+	padding-bottom: 22px;
+}
+
+nav {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: #462390;
+	border-top-style: solid;
+	border-top-color: #212121;
+	border-bottom-style: solid;
+	border-bottom-color: #212121;
+}
+
+nav ul {
+	margin: 0 auto;
+	width: 940px;
+	list-style: none;
+}
+
+nav ul li {
+	float: left;
+}
+
+nav ul li a {
+	display: block;
+	margin-right: 20px;
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: #212121 1px 1px 0;
+	color: #fffeff;
+	font-weight: bold;
+	margin-left: 5px;
+	padding-left: 22px;
+	text-align: left;
+}
+
+nav ul li a:visited {
+	color: #fffeff;
+}
+
+nav ul li a.selected {
+	color: #fefa2f;
+}
+
+nav ul li.bookmarks a {
+	background: url("../img/icons/star.png") left center no-repeat;
+}
+
+nav ul li.new a {
+	background: url("../img/icons/heart_add.png") left center no-repeat;
+}
+
+nav ul li.settings a {
+	
+
+/* background: url("../img/icons/wrench_orange.png") left center no-repeat; */
+	background: url("../img/icons/user_edit.png") left center no-repeat;
+}
+
+nav ul li.help a {
+	background: url("../img/icons/help.png") left center no-repeat;
+}
+
+nav ul li.logout a {
+	background: url("../img/icons/door_in.png") left center no-repeat;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+footer {
+	width: 940px;
+	display: table;
+	margin-top: 10px;
+	padding: 20px;
+	display: table;
+	text-align: center;
+	font-weight: bold;
+}
+
+table#bookmark-table {
+	width: 800px;
+	padding-top: 15px;
+	padding-right: 45px;
+	padding-left: 8px;
+	border: 0;
+}
+
+table#bookmark-table tbody tr td {
+	padding-bottom: 6px;
+	font-size: medium;
+	line-height: 1.4;
+}
+
+table#bookmark-table tbody tr {
+	border: 0;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+
+table#bookmark-table tbody tr:hover{
+	border-style: solid;
+	border-width: 2px;
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+}
+
+table#bookmark-table tbody tr td a {
+	font-weight: bold;
+	color: #7f3090;
+}
+
+table#bookmark-table tbody tr td a:visited {
+	font-weight: bold;
+	color: #424242;
+}
+
+form#new-bookmark {
+	background: #9cbc2c;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	width: 480px;
+	padding-top: 15px;
+	padding-right: 45px;
+	padding-left: 8px;
+}
+
+form#new-bookmark fieldset {
+	border: none;
+	margin-bottom: 10px;
+}
+
+form#new-bookmark fieldset:last-of-type {
+	margin-bottom: 0;
+}
+
+form#new-bookmark legend {
+	color: #384313;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 1px #c0d576;
+}
+
+form#new-bookmark fieldset fieldset legend {
+	color: #111111;
+	font-size: 13px;
+	font-weight: normal;
+	padding-bottom: 0;
+}
+
+form#new-bookmark ol li {
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 20px;
+	list-style: none;
+	padding: 8px 10px;
+	margin-bottom: 2px;
+}
+
+form#new-bookmark ol ol li {
+	background: none;
+	border: none;
+	float: left;
+}
+
+form#new-bookmark ol li label {
+	float: left;
+	width: 110px;
+	font: bold 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+form#new-bookmark ol li label.folder {
+	background: url("../img/icons/folder_star.png") no-repeat;
+	padding-left: 22px;
+}
+
+form#new-bookmark ol li label.note {
+	background: url("../img/icons/note_edit.png") no-repeat;
+	padding-left: 22px;
+}
+
+form#new-bookmark ol li label.title {
+	background: url("../img/icons/pencil.png") no-repeat;
+	padding-left: 22px;
+}
+
+form#new-bookmark ol li label.link {
+	background: url("../img/icons/link_edit.png") no-repeat;
+	padding-left: 22px;
+}
+
+form#new-bookmark fieldset fieldset label {
+	background: none no-repeat left 50%;
+	line-height: 20px;
+	padding: 0 0 0 30px;
+	width: auto;
+}
+
+form#new-bookmark fieldset fieldset label:hover {
+	cursor: pointer;
+}
+
+form#new-bookmark input:not([type=radio]), 
+form#new-bookmark textarea {
+	background: #ffffff;
+	border: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	font: italic 13px;
+	outline: none;
+	padding: 5px;
+	width: 380px;
+}
+
+form#new-bookmark input:not([type=submit]):focus, 
+form#new-bookmark textarea:focus {
+	background: #eaeaea;
+}
+
+form#new-bookmark input[type=radio] {
+	float: left;
+	margin-right: 5px;
+}
+
+form#new-bookmark button {
+	background: #384313;
+	border: none;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000000;
+	text-transform: uppercase;
+	font: bold 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+form#new-bookmark button:hover {
+	background: #1e2506;
+	cursor: pointer;
+}

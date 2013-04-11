@@ -1,0 +1,80 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="{% block meta-desc %}{% endblock %}" />
+    <meta name="keywords" content="{% block meta-keywords %}{% endblock %}" />
+    <meta http-equiv="expires" content="no-cache" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>omgmark!{% block title %}{% endblock %}</title>
+
+    {% if settings.DEBUG %}
+        <script type="text/javascript" src="/js/jquery-1.4.2.js"></script>
+    {% else %}
+       <!-- Framework JS via the Google CDN -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script> 
+    {% endif %}
+
+    <!-- Load fonts via Google's CDN -->
+    <script type="text/javascript">
+      WebFont.load({
+        google: {
+          families: [ 'Lobster' ]
+        }
+      });
+    </script>
+
+    <!-- Site JS & CSS -->
+    <link rel="stylesheet" href="/css/bookmark.css" type="text/css" />
+    <link rel="shortcut icon" type="image/png" href="{% url home %}img/icons/folder_heart.png" /> 
+
+</head>
+<body>
+
+<header>
+    <hgroup>
+    <h1>omgmark!</h1> 
+    </hgroup>
+</header>
+
+<!-- nav -->
+<nav>
+
+</nav>
+<!-- end nav -->
+
+<div id="content">
+<!-- Begin the content block -->
+{% block content %}
+    <section id="home">
+        <p>This is the HOMEPAGE!!!</p>
+        <a href="{% url login %}">Login</a><br />
+        <a href="{% url logout %}">Logout</a><br />
+        <a href="/admin/">Admin</a><br />
+    </section>
+{% endblock %}
+<!-- End the content block -->
+</div>
+
+<div id="fb-root"></div>
+
+<footer>
+<p>&middot; &copy; 2010, FunkHQ &middot; <a href="#">Copyright</a> &middot; <a href="#">Privacy Policy</a> &middot;</p>
+</footer>
+
+
+
+<!-- Page specific JS goes here -->
+{% block pagejs %}{% endblock %}
+<!-- Page specific JS ends here -->
+
+</body>
+</html>
+
+{% comment %}
+
+
+{% endcomment %}

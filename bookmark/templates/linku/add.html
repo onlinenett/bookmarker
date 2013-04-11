@@ -1,0 +1,44 @@
+{% extends 'base_authenticated.html' %}
+
+
+{% block content %}
+<h1>Add a new bookmark?</h1>
+
+<section id="add-bookmark" class="section">
+    <form id="new-bookmark" action="." method="post">
+        <fieldset>
+        <legend>Please give me details of your new bookmark:</legend>
+        <ol>
+            <li>
+                <label class="link">Link</label>
+                <input id="id_link" name="link" type="url" size="60">
+            </li>
+            <li>
+                <label class="title">Title</label>
+                <input id="id_title" name="title" type="text"  maxlength="500" />
+            </li>
+            <li>
+                <label class="note">Note</label>
+                <textarea id="id_note" name="note" rows="3" cols="60"></textarea>
+            </li>
+            <li>
+                <label class="folder">Folder</label>
+                <input id="id_tags" name="tags" type="text" size="30">
+            </li>
+        </ol>
+        </fieldset>
+            <p><button>Save</button></p>
+    </form>
+
+    <p>Why not grab the bookmarklet as well?</p>
+    <p>Drag this link to your bookmarks bar: 
+    <a href="javascript:(function(){f='http://localhost:8000/save/?link='+encodeURIComponent(window.location.href)+'&title='+ encodeURIComponent(document.title)+'&';a=function(){if(!window.open(f+'noui=1&jump=doclose','omgmark','location=no,links=no,scrollbars=no,toolbar=no,width=520,height=520'))location.href=f+'jump=yes'};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})()">omg!</a>
+    </p>
+
+</section>
+
+{% endblock %}
+
+{% block pagejs %}
+
+{% endblock %}

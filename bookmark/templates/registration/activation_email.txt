@@ -1,0 +1,14 @@
+Hi!
+
+A registration request was made for a new account on {{ site }} with your email address. 
+
+To activate that account, please use the following activation key:
+
+{{ activation_key }}
+
+The above activation key expires in {{ expiration_days }}.
+
+We are really, really, really looking forward to having your use our site!!!
+
+Thanks a zillion,
+FunkHQ dudette. 

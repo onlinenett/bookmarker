@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<p></p>
+{% endif %}
+
+<form id="register" action="." method="post">
+<table>
+{{ form }}
+</table>
+<p><button>Save</button></p>
+</form>
+
+{% endblock %}
+
+
+{% block pagejs %}
+
+{% endblock %}
+
+

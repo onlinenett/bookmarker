@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <title>new omg!</title>
+    <!-- Site JS & CSS -->
+    <link rel="stylesheet" href="/css/bookmark.css" type="text/css" />
+</head>
+<body>
+<section id="add-bookmark" class="section">
+    <form id="new-bookmark" action="." method="post">
+        <fieldset>
+        <legend>Please give me details of your new bookmark:</legend>
+        <ol>
+            <li>
+                <label class="link">Link</label>
+                <input id="id_link" name="link" type="url" size="60" value="{{ link }}" />
+            </li>
+            <li>
+                <label class="title">Title</label>
+                <input id="id_title" name="title" type="text"  maxlength="500" value="{{ title }}" />
+            </li>
+            <li>
+                <label class="note">Note</label>
+                <textarea id="id_note" name="note" rows="3" cols="60">{{ note }}</textarea>
+            </li>
+            <li>
+                <label class="folder">Folder</label>
+                <input id="id_tags" name="tags" type="text" size="30" value="" />
+            </li>
+        </ol>
+        </fieldset>
+            <p><button>Save</button></p>
+    </form>
+</section>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+
+
