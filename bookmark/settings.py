@@ -38,9 +38,9 @@ if (socket.gethostname() == 'funkhq.com' and (uid == 'funkomg')):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME':  'omgmark',   # Or path to database file if using sqlite3.
-            'USER': 'omgmark_rw',                      # Not used with sqlite3.
-            'PASSWORD': 'vj6-KJs4KW68Nu2u7abSiWgWE',                  # Not used with sqlite3.
+            'NAME':  '<DBNAME>',   # Or path to database file if using sqlite3.
+            'USER': '<USER>',                      # Not used with sqlite3.
+            'PASSWORD': '<PASSWORD>',                  # Not used with sqlite3.
             'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
             'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
         }
@@ -146,8 +146,8 @@ FILE_UPLOAD_PERMISSIONS = 0400
 # Facebook application specific details
 try: 
     import facebook
-    FACEBOOK_API_KEY = '01613f90122682ec58b3ac0e7563caa9'
-    FACEBOOK_APP_SECRET = 'e57f4eba303d35c49f0e10f68828a51f'
+    FACEBOOK_API_KEY = '<FBAPIKEY>'
+    FACEBOOK_APP_SECRET = '<FBAPPSEC>'
 except ImportError:
     if DEBUG:
         # raise template.TemplateSyntaxError, "Error importing facebook python-sdk."
